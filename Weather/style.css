@@ -4,8 +4,8 @@ body{
     color:rgb(253, 10, 233);
     font-size: 19px;
     background: linear-gradient(90deg, rgb(243, 236, 172), rgb(112, 243, 232));
-
 }
+
 .box{
     position: relative;
     display: flex;
@@ -17,7 +17,6 @@ body{
     height:350px;
     border-radius : 3% ;
     text-align: center;
-    
 }
 
 img{
@@ -32,18 +31,19 @@ p{
 }
 
 form{
-    
     display: flex;
     justify-content: center;
     margin:5.5%;
-    /* border:2px solid red; */
-}
+   }
+
 .heading{
     text-align: center;
 }
+
 input{
+    font-family: 'Courier New', Courier, monospace;
     margin:7px;
-    padding:5px;
+    padding:7px;
 }
 
 input[type="submit"]{
@@ -55,11 +55,6 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: rgb(250, 135, 135);
     
-}
-
-#date,#city_name{
-    display: block;
-    width:100%;
 }
 
 #temp{
