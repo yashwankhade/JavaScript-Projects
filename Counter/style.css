@@ -1,0 +1,36 @@
+*{
+    font-family:cursive;
+    font-size: 20px;
+}
+body{
+    background: linear-gradient(90deg, rgb(239, 247, 132), rgb(133, 231, 103));
+}
+#demo,.heading{
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin:20px auto;
+    outline: none;
+    border:2px solid yellow;
+    background-color: rgb(23, 217, 252);
+
+}
+button:hover{
+    background-color: violet;
+}
+
+.counter{
+    width:400px;
+    border: 3px dotted red;
+    margin:0 auto;
+}
+
+input:in-range{
+    color:green;
+}
+
+input:out-of-range{
+    color: red;
+}

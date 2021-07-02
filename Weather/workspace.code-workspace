@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Drum Kit Starting Files",
+			"path": "..\\..\\..\\Downloads\\Drum Kit Starting Files\\Drum Kit Starting Files"
+		},
+		{
+			"name": "JavaScript Projects",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JavaScript Projects"
+	}
+}
