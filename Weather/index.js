@@ -2,7 +2,7 @@ var a;
  document.getElementById('submit').addEventListener('click',function(e){
    var city = document.querySelector('#input')[0].value;
   //  fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=90599d11e8d47bf5db7e877188c97ef5&units=metric')
-  fetch('http://api.weatherapi.com/v1/current.json?key=6c16bfc6e71645c1b08111746211306&q='+city+'&unit=metrics')
+  fetch('https://api.weatherapi.com/v1/current.json?key=6c16bfc6e71645c1b08111746211306&q='+city+'&unit=metrics')
    .then(response=>response.json())
    .then(data=>{
      a=data;
