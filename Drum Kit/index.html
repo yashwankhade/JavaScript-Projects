@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>भारतीय संगीत</h1>
+
+  <div class="keys">
+    <button data-key="65" class="key">
+      <kbd>सा</kbd>
+      <span class="sound">Sa</span>
+    </button>
+    <button data-key="83" class="key">
+      <kbd>रे</kbd>
+      <span class="sound">Re</span>
+    </button>
+    <button data-key="68" class="key">
+      <kbd>ग</kbd>
+      <span class="sound">Ga</span>
+    </button>
+    <button data-key="70" class="key">
+      <kbd>म</kbd>
+      <span class="sound">Ma</span>
+    </button>
+    <button data-key="71" class="key">
+      <kbd>प</kbd>
+      <span class="sound">Pa</span>
+    </button>
+    <button data-key="72" class="key">
+      <kbd>ध</kbd>
+      <span class="sound">Dha</span>
+    </button>
+    <button data-key="74" class="key">
+      <kbd>नि</kbd>
+      <span class="sound">Ni</span>
+    </button>
+    <button data-key="75" class="key">
+      <kbd>सां</kbd>
+      <span class="sound">Sa</span>
+    </button>
+  </div>
+
+  <audio data-key="सा" src="sounds/Saa.wav"></audio>
+  <audio data-key="रे" src="sounds/Re.wav"></audio>
+  <audio data-key="ग" src="sounds/Ga.wav"></audio>
+  <audio data-key="म" src="sounds/Ma.wav"></audio>
+  <audio data-key="प" src="sounds/Pa.wav"></audio>
+  <audio data-key="ध" src="sounds/Dha.wav"></audio>
+  <audio data-key="नि" src="sounds/Ni.wav"></audio>
+  <audio data-key="सां" src="sounds/Saa2.wav"></audio>
+   
+
+<script>
+  window.addEventListener('keydown',(e)=>{
+    var audio = document.querySelector(`audio[data-key="${e.target.innerText}"]`);
+    var key = document.querySelector(`.key[data-key="${e.target.innerText}" ]`);
+    if(!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+    console.log(key)
+  });
+
+  var length = document.querySelectorAll('button').length;
+  for(let i=0;i<length;i++){
+    document.querySelectorAll('button')[i].addEventListener('click',(e)=>{
+      var b=document.querySelectorAll('button')[i];
+      b.classList.add('playing');
+      
+      var audio = document.querySelector(`audio[data-key="${e.target.innerText}"]`);
+     console.log(audio);
+     audio.currentTime = 0;
+    audio.play();
+    
+    var b = e.target;
+    
+     
+  });
+  };
+function transitionEnd(e){
+  if(e.propertyName !== 'transform') return;
+  this.classList.remove('playing');
+}
+const keys = document.querySelectorAll('.key');
+
+keys.forEach((key)=>{
+  key.addEventListener('transitionend',transitionEnd);
+});
+
+</script>
+ 
+</body>
+</html>
