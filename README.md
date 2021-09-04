@@ -1,1 +1,1 @@
-﻿# JavaScript Clock
+﻿# JavaScript Projects
